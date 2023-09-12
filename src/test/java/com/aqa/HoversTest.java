@@ -12,10 +12,11 @@ public class HoversTest extends BaseTest{
     @Test
     public void hoversTest(){
         driver.findElement(By.linkText("Hovers")).click();
-        List<WebElement> avatars = driver.findElements(By.cssSelector(""));
+        List<WebElement> avatars = driver.findElements(By.cssSelector("img[alt=\"User Avatar\"]"));
         Actions actions = new Actions(driver);
         actions.moveToElement(avatars.get(0)).build().perform();
-        driver.findElement(By.linkText("view profile")).click();
+        driver.findElement(By.linkText("View profile")).click();
+        driver.navigate().back();
 
     }
 }
