@@ -19,7 +19,6 @@ public class BaseTest {
         //driver.manage().window().setSize(new Dimension(720, 480));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://the-internet.herokuapp.com/");
-        System.out.println();
     }
 
     @AfterMethod(alwaysRun = true)
